@@ -122,6 +122,8 @@ class MainView extends Component {
       // many better ways to manage page titles.
 
       // Get information about the page
+      // As mentioned, this is not necessary required and you'll need to add
+      // the find() polyfill for IE11.
       const selectedPageKey = Object.keys(this.pages).find(key => {
         const page = this.pages[key];
         return page.route === this.props.location.pathname
